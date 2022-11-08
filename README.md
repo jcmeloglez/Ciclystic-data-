@@ -21,7 +21,7 @@ To do that we will examine the business question: 'what is the most effective ma
 This report will try to awnser the following question :
 How do annual members and casual riders use Cyclistic bikes differently?
 
-Wit a dataset for the past 12 month september 2021 - augost 2022, Each data set for each month is in csv format and details every ride logged by Cyclistic customers. This data has been made publicly available via license by Motivate International Inc. and the city of Chicago . All user’s personal data has been scrubbed for privacy.
+I started with a dataset for the past 12 months September 2021 - August 2022. The data set for each month is in csv format and details every ride logged by Cyclistic customers. This data has been made publicly available via license by Motivate International Inc. and the city of Chicago . All user’s personal data has been scrubbed for privacy.
 
 We used SQL bigquery to clean and prepare the data for analysis
 Tableau to visualize our findins 
@@ -29,9 +29,9 @@ Tableau to visualize our findins
 That data tell us that:
 
 1. The causal riders prefer to use the service during the weekends. The long term members conversly utilised the service more-so throughout the typical work week i.e (Monday- friday)
-2. the Casual riders spent on average longer time per ride and the menbers are more consintent with it, this we can see it in the weeks and during the whole year.
-3. Casual users tended to ride more so in the warmer months of Chicago, June- August and during the winter they hardly use bike, Although members also tended to ride more in the summer,their used constatly and even during the winter we can still finds we decent numbers or rides
-4. Long term riders tended to stick more with classic bikes as opposed to the docked or electric bikes.
+2. The casual riders spent on average longer time per ride than the members, this we can see by examining weekly data throughout the year.
+3. Casual riders tend to ride more so in the warmer months of Chicago, June-August and during the winter they hardly use the service. Although members also tend to ride more in the summer, the do still consistently utilize the bikes. Even during the winter, the numbers show a decent amount of use.
+4. Long term riders tend to stick more with classic bikes as opposed to the docked or electric bikes.
  
-This analysis suggest the the members used the bikes more as mind of transportations and less as recrations.
+This analysis suggests the the members use the bikes more as mode of transportations and less as a form of recreation.
 
