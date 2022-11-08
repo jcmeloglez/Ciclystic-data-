@@ -1,6 +1,9 @@
+--##This isthe sql query that i use to clean and prepare the cyclistic dataset for analysis#
+--## creating the new table for our analysis
 CREATE TABLE `case-study1-bikeshare.bikeshare.cyclistic_year0921-22` AS
  SELECT ride_id, rideable_type, member_casual,
   TIME_DIFF(ended_time,started_time,MINUTE) AS ride_legth_min,
+  --##modifing the data that the query sould rutern, name of the weekday and name of the month 
   CASE
    WHEN day= 1 THEN "sunday"
    WHEN day= 2 THEN "monday"
@@ -26,13 +29,16 @@ CREATE TABLE `case-study1-bikeshare.bikeshare.cyclistic_year0921-22` AS
    END AS month
  FROM
    (
+    --## extracting adn creating column that we will need for analysis
     SELECT *,
      EXTRACT (dayofweek FROM started_at ) as day,
      EXTRACT (dayofyear FROM started_at) as day_of_year,
      EXTRACT (month FROM started_at) as monthdate,
      TIME(ended_at) AS ended_time, TIME(started_at) AS started_time
-    FROM (
-      SELECT ride_id,rideable_type,started_at,ended_at,member_casual,
+    FROM 
+    (
+     --##combining all the tables in one##
+     SELECT ride_id,rideable_type,started_at,ended_at,member_casual,
        FROM `case-study1-bikeshare.bikeshare.Jan22`
       UNION ALL
       SELECT ride_id,rideable_type,started_at,ended_at,member_casual
